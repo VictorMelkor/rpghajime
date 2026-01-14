@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RPG Hajime — Akashi</title>
+    <link rel="stylesheet" href="static/css/base.css">
+    <style>
+        /* Pequenos ajustes internos para o container de linhas */
+        .roll-lines-container {
+            margin-bottom: 10px;
+        }
+
+        .roll-line {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 5px;
+            align-items: center;
+        }
+
+        .roll-line input,
+        .roll-line select {
+            width: 60px;
+        }
+
+        .roll-line .remove-line {
+            cursor: pointer;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 0 6px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .mini {
+            font-size: 12px;
+            padding: 2px 6px;
+            margin-left: 5px;
+        }
+
+        /* Layout jogador com feed à direita */
+        #app {
+            display: flex;
+            gap: 10px;
+            height: 100vh;
+        }
+
+        #menu {
+            width: 200px;
+        }
+
+        #main {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        /* Painel central da ficha e rolagens */
+        .panel {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-radius: 6px;
+            height: 90vh;
+        }
+
+        /* separação visual entre rolagens e ficha */
+        .roll-section,
+        .character-section {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+
+        }
+
+        /* Feed à direita */
+        #feed {
+            width: 200px;
+            height: 90vh;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>🎲 RPG Hajime</header>
+
+    <div id="app">
+        <aside id="menu">
+            <a class="master" href="index.html">Melkor</a>
+            <a href="speroto.html">Aiko</a>
+            <a href="jean.html">Akashi</a>
+            <a href="shino.html">Shino</a>
+            <a href="vegeta.html">Shitaro</a>
+            <a href="satanas.html">Somu</a>
+            <a href="oka.html">Tanjiro</a>
+            <a href="shadow.html">Tetsuya</a>
+            <a href="waka.html">Yurei</a>
+        </aside>
+
+        <!-- Conteúdo central + feed -->
+        <main id="main">
+            <!-- Painel central -->
+            <section class="panel">
+
+                <!-- Área de rolagens -->
+                <div class="roll-section">
+                    <div class="row">
+                        <input id="charName" value="Akashi" readonly>
+                        <input id="rollType" placeholder="Tipo de rolagem">
+                    </div>
+
+                    <div class="roll-lines-container" id="rollLines">
+                        <div class="roll-line">
+                            <input type="number" class="diceCount" value="1" min="1">
+                            <select class="diceType">
+                                <option value="2">d2</option>
+                                <option value="3">d3</option>
+                                <option value="4">d4</option>
+                                <option value="6">d6</option>
+                                <option value="8">d8</option>
+                                <option value="10">d10</option>
+                                <option value="12">d12</option>
+                                <option value="20" selected>d20</option>
+                            </select>
+                            <input type="number" class="mod" value="0">
+                            <button class="remove-line">×</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button id="moreDice" class="mini">+linha</button>
+                        <button id="rollBtn" class="primary">Rolar</button>
+                    </div>
+                </div>
+
+                <!-- Área da ficha -->
+                <div class="character-section">
+                    <!-- Cabeçalho com imagem à direita -->
+                    <div class="character-header">
+                        <h3>Ficha de Akashi</h3>
+                    </div>
+
+                    <div class="character-main">
+                        <div class="character-info">
+                            <p><strong>Nome:</strong> Akashi</p>
+                            <p><strong>Apelido/Título Ninja:</strong> Evidência 74 / Monstro do Deserto / Múmia</p>
+                            <p><strong>Clã:</strong> Sabaku</p>
+                            <p><strong>Idade:</strong> 19</p>
+                            <p><strong>Peso:</strong> 52kg</p>
+                            <p><strong>Altura:</strong> 1.55m</p>
+                            <p><strong>Vila de Origem:</strong> Sunagakure no Sato</p>
+                            <p><strong>Graduação:</strong> Tokubetsu Jōnin</p>
+                            <p><strong>Elemento Inicial:</strong> Doton</p>
+                            <p><strong>Karma / Alinhamento:</strong> Caótico mau</p>
+                            <p><strong>Dinheiro Inicial:</strong> 0 ryō</p>
+
+                            <hr>
+                            <div class="stats-columns"
+                                style="display:flex; gap: 80px; justify-content:center; align-items:flex-start;">
+                                <!-- Coluna esquerda: STATUS e DEFESAS -->
+                                <div style="flex:1; min-width:180px;">
+                                    <h4 class="section-title">STATUS</h4>
+                                    <p><strong>HP:</strong> 70</p>
+                                    <p><strong>Reserva de Chakra:</strong> 510 CP</p>
+                                    <br>
+                                    <h4 class="section-title">DEFESAS</h4>
+                                    <p><strong>CA:</strong> 15</p>
+                                    <p><strong>Reflexos:</strong> 9</p>
+                                    <p><strong>Vontade:</strong> 18</p>
+                                    <p><strong>Tolerância:</strong> 14</p>
+                                </div>
+
+                                <!-- Coluna direita: ATRIBUTOS -->
+                                <div style="flex:1; min-width:180px;">
+                                    <h4 class="section-title">ATRIBUTOS</h4>
+                                    <p><strong>Força (STR):</strong> 8 (–1) <button class="roll-btn" data-mod="-1"
+                                            data-type="20" data-count="1" data-kind="Força (STR)">🎲</button></p>
+                                    <p><strong>Destreza (DEX):</strong> 8 (–1) <button class="roll-btn" data-mod="-1"
+                                            data-type="20" data-count="1" data-kind="Destreza (DEX)">🎲</button></p>
+                                    <p><strong>Constituição (CON):</strong> 18 (+4) <button class="roll-btn"
+                                            data-mod="4" data-type="20" data-count="1"
+                                            data-kind="Constituição (CON)">🎲</button></p>
+                                    <p><strong>Inteligência (INT):</strong> 18 (+4) <button class="roll-btn"
+                                            data-mod="4" data-type="20" data-count="1"
+                                            data-kind="Inteligência (INT)">🎲</button></p>
+                                    <p><strong>Sabedoria (WIS):</strong> 18 (+4) <button class="roll-btn" data-mod="4"
+                                            data-type="20" data-count="1" data-kind="Sabedoria (WIS)">🎲</button></p>
+                                    <p><strong>Carisma (CHA):</strong> 8 (–1) <button class="roll-btn" data-mod="-1"
+                                            data-type="20" data-count="1" data-kind="Carisma (CHA)">🎲</button></p>
+                                </div>
+                            </div>
+
+
+                            <hr>
+                            <h4 class="section-title">ATAQUES</h4>
+                            <br>
+                            <div style="text-align: center;">
+                                <p><strong>Ataque corpo a corpo (FOR)</strong><button class="roll-btn" data-mod="-1"
+                                        data-type="20" data-count="1" data-kind="Ataque corpo a corpo">🎲</button></p>
+                                <p><strong>Ataque à distância (DEX)</strong><button class="roll-btn" data-mod="-1"
+                                        data-type="20" data-count="1" data-kind="Ataque à distância">🎲</button></p>
+                                <p><strong>Ataque Ninjutsu (INT)</strong><button class="roll-btn" data-mod="4"
+                                        data-type="20" data-count="1" data-kind="Ninjutsu">🎲</button></p>
+                                <p><strong>Ataque Genjutsu (CAR)</strong><button class="roll-btn" data-mod="-1"
+                                        data-type="20" data-count="1" data-kind="Ataque corpo a corpo">🎲</button></p>
+                            </div>
+                            <br>
+                            <hr>
+
+                            <!-- TALENTOS -->
+                            <h4 class="section-title">TALENTOS</h4>
+                            <br>
+                            <details>
+                                <summary>Controle Fino de Chakra</summary>
+                                <p>Akashi manipula seu chakra com precisão, usando menos energia e mantendo técnicas
+                                    complexas ou múltiplas sem desperdício.</p>
+                                <p><b>Vantagem Sistemática:</b> Reduz o custo de chakra de jutsus rank D ou C em 5
+                                    pontos (uma vez por jutsu por cena).</p>
+                            </details>
+
+                            <details>
+                                <summary>Resistência Ninja</summary>
+                                <p>Akashi suporta dor, veneno, fadiga e esforço extremo, favorecendo concentração e
+                                    execução longa de ações.</p>
+                                <p><b>Vantagem Sistemática:</b> +1 em testes de Constituição contra dano contínuo,
+                                    veneno ou fadiga.</p>
+                            </details>
+                            <br>
+                            <hr>
+
+                            <!-- PERÍCIAS EM DUAS COLUNAS -->
+                            <h4 class="section-title">PERÍCIAS</h4>
+                            <div class="skills-columns"
+                                style="display:flex; gap:80px; justify-content: center; align-items: center;">
+                                <div>
+                                    <div>Acrobacia (DEX): –1 <button class="roll-btn" data-mod="-1" data-type="20"
+                                            data-count="1" data-kind="Acrobacia (DEX)">🎲</button></div>
+                                    <div>Atletismo (STR): –1 <button class="roll-btn" data-mod="-1" data-type="20"
+                                            data-count="1" data-kind="Atletismo (STR)">🎲</button></div>
+                                    <div>Furtividade (DEX): +2 <button class="roll-btn" data-mod="2" data-type="20"
+                                            data-count="1" data-kind="Furtividade (DEX)">🎲</button></div>
+                                    <div>Prestidigitação Ninja (DEX): –1 <button class="roll-btn" data-mod="-1"
+                                            data-type="20" data-count="1"
+                                            data-kind="Prestidigitação Ninja (DEX)">🎲</button></div>
+                                    <div>Percepção (WIS): +7 <button class="roll-btn" data-mod="7" data-type="20"
+                                            data-count="1" data-kind="Percepção (WIS)">🎲</button></div>
+                                    <div>Intuição Tática (WIS): +4 <button class="roll-btn" data-mod="4" data-type="20"
+                                            data-count="1" data-kind="Intuição Tática (WIS)">🎲</button></div>
+                                    <div>Investigação (INT): +4 <button class="roll-btn" data-mod="4" data-type="20"
+                                            data-count="1" data-kind="Investigação (INT)">🎲</button></div>
+                                    <div>Sobrevivência (WIS): +7 <button class="roll-btn" data-mod="7" data-type="20"
+                                            data-count="1" data-kind="Sobrevivência (WIS)">🎲</button></div>
+                                </div>
+                                <div>
+                                    <div>Trato com Invocações (WIS): +4 <button class="roll-btn" data-mod="4"
+                                            data-type="20" data-count="1"
+                                            data-kind="Trato com Invocações (WIS)">🎲</button></div>
+                                    <div>Medicina Ninja (WIS): +7 <button class="roll-btn" data-mod="7" data-type="20"
+                                            data-count="1" data-kind="Medicina Ninja (WIS)">🎲</button></div>
+                                    <div>Enganação (CHA): –1 <button class="roll-btn" data-mod="-1" data-type="20"
+                                            data-count="1" data-kind="Enganação (CHA)">🎲</button></div>
+                                    <div>Intimidação (CHA): –1 <button class="roll-btn" data-mod="-1" data-type="20"
+                                            data-count="1" data-kind="Intimidação (CHA)">🎲</button></div>
+                                    <div>Persuasão (CHA): –1 <button class="roll-btn" data-mod="-1" data-type="20"
+                                            data-count="1" data-kind="Persuasão (CHA)">🎲</button></div>
+                                    <div>Performance Ninja (CHA): –1 <button class="roll-btn" data-mod="-1"
+                                            data-type="20" data-count="1"
+                                            data-kind="Performance Ninja (CHA)">🎲</button></div>
+                                    <div>Conhecimento Ninja (INT): +7 <button class="roll-btn" data-mod="7"
+                                            data-type="20" data-count="1"
+                                            data-kind="Conhecimento Ninja (INT)">🎲</button></div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h4 class="section-title">JUTSUS</h4>
+
+                            <h5>--ACADÊMICOS</h5>
+                            <details>
+                                <summary>Bunshin no Jutsu</summary>
+                                <p>Cria uma ilusão visual do usuário. Tipo: Genjutsu – Engano. Custo: 5 CP.</p>
+                                <p>Sistema: O usuário cria até 3 cópias ilusórias. Ataques contra um bunshin o
+                                    dissipam.
+                                    Primeiro ataque contra o usuário sofre desvantagem. Teste de Percepção CD = 10 +
+                                    INT
+                                    mod.
+                                </p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Henge no Jutsu
+                                </summary>
+                                <p>Altera a aparência física do usuário. Tipo: Ninjutsu – Disfarce. Custo: 5 CP.</p>
+                                <p>Sistema: Assume forma de outra criatura humanoide. Testes sociais recebem
+                                    vantagem se
+                                    disfarce for plausível. Suspeita: Investigação CD = 10 + INT mod.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Kawarimi no Jutsu
+                                </summary>
+                                <p>Substituição instantânea ao sofrer ataque. Tipo: Ninjutsu – Reação. Custo: 10 CP.
+                                </p>
+                                <p>Sistema: Usuário pode forçar ataque a errar e surgir em posição segura. Uso
+                                    limitado
+                                    a
+                                    uma
+                                    vez por cena.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Nawanuke no Jutsu
+                                </summary>
+                                <p>Liberta o usuário de amarras físicas. Tipo: Ninjutsu – Utilidade. Custo: 5 CP.
+                                </p>
+                                <p>Sistema: Remove condições de aprisionamento simples. Contra selos ou técnicas,
+                                    concede
+                                    vantagem em teste de escape.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Kai
+                                </summary>
+                                <p>Dissipa genjutsu. Tipo: Ninjutsu – Defesa Mental. Custo: 30 CP.</p>
+                                <p>Sistema: Permite novo teste contra ilusões ou efeitos mentais com vantagem.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Kaifū no Jutsu
+                                </summary>
+                                <p>Liberação simples de selos e travas de chakra. Tipo: Fūinjutsu – Utilidade.
+                                    Custo: 10
+                                    CP.
+                                </p>
+                                <p>Sistema: Anula lacres simples e efeitos de contenção narrativos.</p>
+                            </details>
+
+                            <h5>--RANK D</h5>
+                            <details>
+                                <summary>
+                                    Daisan no Me (Rank D)
+                                </summary>
+                                <p>Cria um pequeno olho de areia flutuante, ligado ao chakra. Tipo: Ninjutsu –
+                                    Sensorial/Espionagem. Atributo-chave: INT. Efeito: visão 360°, até 30m do
+                                    usuário,
+                                    alterna
+                                    visão. Sofre –2 em CA e Esquiva ao usar. Teste de percepção CD = 10 + INT mod.
+                                    Fragilidade:
+                                    CA 12, 1 PV. Duração: Concentração 10 min. Falha crítica 1: Atordoado 1 turno.
+                                </p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Suna no Yoroi (Rank D)
+                                </summary>
+                                <p>Revestimento de areia. Tipo: Ninjutsu – Defesa. Atributo-chave: INT. Efeito: +1
+                                    CA,
+                                    não
+                                    impede movimentos. Limitações: não protege contra genjutsu ou mentais. Duração:
+                                    5
+                                    min.
+                                    Falha
+                                    crítica: –1 CA 1 turno.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Doton: Doryuu Taiga (Rank D)
+                                </summary>
+                                <p>Transforma solo em lama instável. Tipo: Ninjutsu – Controle de Campo.
+                                    Atributo-chave:
+                                    INT.
+                                    Sistema: ataque contra Esquiva do alvo 1d20 + INT. Sucesso: Derrubado,
+                                    Desvantagem
+                                    no
+                                    próximo teste físico, –2 ações físicas. Falha: lama não afeta alvo. Efeito de
+                                    Campo:
+                                    –1
+                                    CA e
+                                    Esquiva. Duração: até fim próximo turno.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Suna Shurikens (Rank D)
+                                </summary>
+                                <p>Molda areia em shurikens. Tipo: Ninjutsu – Ataque à distância. Atributo: DEX ou
+                                    INT.
+                                    Criação:
+                                    INT mod x2 shurikens/turno. Cada shuriken 2 CP. Ataque: 1d20 + DEX (manual),
+                                    1d20 +
+                                    INT
+                                    (controle). Dano 1d4 perfurante. Crítico: –1 CA alvo. Shurikens se desfazem no
+                                    fim
+                                    da
+                                    cena.
+                                </p>
+                            </details>
+
+                            <h5>--RANK C</h5>
+                            <details>
+                                <summary>
+                                    Suna Bunshin no Jutsu (Rank C)
+                                </summary>
+                                <p>Clone físico de areia. Tipo: Ninjutsu – Engano/Combate. Atributo: INT. Sistema: 1
+                                    PV,
+                                    CA
+                                    igual usuário, atributos –2, iniciativa própria, realiza ações normais, dano
+                                    reduzido à
+                                    metade, primeiro ataque contra usuário sofre Desvantagem. Nuvem de Areia:
+                                    destruição
+                                    cria
+                                    nuvem que dá Desvantagem ataques próximos. Custo: 30 CP. Duração: até ser
+                                    destruído
+                                    ou
+                                    fim
+                                    da cena.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Doton: Dochuu no Eigyo (Rank C)
+                                </summary>
+                                <p>Fusão de chakra à terra, mobilidade subterrânea. Tipo: Ninjutsu –
+                                    Mobilidade/Emboscada.
+                                    Atributo: INT. Sistema: desaparece sob solo, primeira ação ofensiva vantagem,
+                                    falha
+                                    crítica:
+                                    desvantagem defesa próximo turno.</p>
+                            </details>
+
+                            <h5>--RANK B</h5>
+                            <details>
+                                <summary>
+                                    Manipulação da Areia
+                                </summary>
+                                <p>Controle de areia para ataque, defesa e controle de campo. Tipo: Ninjutsu –
+                                    Controle/Ataque/Defesa. Atributo: INT. Ataques: 1d20 + INT, dano 1d6+INT. Defesa
+                                    reativa: 1
+                                    vez/turno +2 CA. Interferência narrativa: Desvantagem inimigos. Limitação:
+                                    consome
+                                    10
+                                    CP.
+                                    Falha crítica: –2 CA e Esquiva 1 turno. Duração: até fim cena/concentração
+                                    quebrada.
+                                </p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Sabaku Fuyū (Rank B)
+                                </summary>
+                                <p>Cria disco de areia para planar. Tipo: Ninjutsu – Mobilidade. Atributo: INT.
+                                    Sistema:
+                                    movimentação 3D limitada, ataques corpo a corpo inimigos Desvantagem, +1 Esquiva
+                                    contra
+                                    jutsus de área/projéteis. Testes físicos com apoio firme sofrem Desvantagem.
+                                    Custo:
+                                    20
+                                    CP
+                                    criar, 10 CP manter. Duração: enquanto custo pago/concentração mantida. Falha
+                                    crítica:
+                                    posição instável, Desvantagem próxima defesa.</p>
+                            </details>
+
+                            <h5>--RANK A</h5>
+                            <details>
+                                <summary>
+                                    Jiton – Liberação de Magnetismo (Rank A)
+                                </summary>
+                                <p>Desperta Jiton, controla Satetsu. Tipo: Ninjutsu Avançado. Atributo: INT.
+                                    Sistema:
+                                    estado
+                                    magnético, jutsus Suna podem virar Jiton, ataques d20 + INT, dano 1d10+INT.
+                                    Custo:
+                                    Ativar 30
+                                    CP, manter 10 CP, adaptar +⅓ adicional. Limitação: concentração quebrada =
+                                    Satetsu
+                                    cai.
+                                    Melhorias automáticas: Suna Shuriken → Jiton Satetsu Shuriken, Suna no Yoroi →
+                                    Jiton
+                                    Satetsu
+                                    Yoroi, Suna Bunshin → Jiton Satetsu Bunshin.</p>
+                            </details>
+
+                            <h5>--RANK S</h5>
+                            <p>Ainda não possui jutsus Rank S registrados.</p>
+
+                            <hr>
+
+                            <h4 class="section-title">ITENS E EQUIPAMENTOS</h4>
+
+                            <details>
+                                <summary>
+                                    Armadura Integrada Shinobi
+                                </summary>
+                                <p>Conjunto completo de placas leves, couro reforçado e camadas técnicas, máscara
+                                    tática
+                                    com
+                                    respirador, rádio embutido, lentes protetoras. Bônus CA +2. Comunicação rádio,
+                                    respiração
+                                    subaquática, vantagem contra gases, fumaça e venenos, lentes vantagem testes
+                                    cegueira.
+                                    Leve,
+                                    sem penalidades mecânicas.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Arma Pessoal
+                                </summary>
+                                <p>Cabaça de Areia (Pó de Ferro): recipiente selado flutuante, até 6 m³ de areia/pó
+                                    de
+                                    ferro,
+                                    permite uso de jutsus dependentes. Destruição = Desvantagem até reabastecer.
+                                    Reabastecimento
+                                    exige tempo narrativo.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Ferramentas Ninja Padrão
+                                </summary>
+                                <p>6x Kunais – Dano 1d6</p>
+                                <p>12x Shurikens – Dano 1d4</p>
+                                <p>10x Senbons – 5 por mão por ataque, Dano 1d4</p>
+                                <p>Kit Escalada – corda de chakra, ganchos, pitons, luvas, vantagem testes
+                                    escalada/infiltração/fuga</p>
+                                <p>3x Bombas de Fumaça – cobertura visual, Desvantagem inimigos</p>
+                                <p>2x Selos Explosivos – dano leve em área, armadilhas</p>
+                                <p>Rações Shinobi – 5 dias de sustento</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Bolsos de Acesso Rápido (Cintura)
+                                </summary>
+                                <p>Bolsa Shinobi (Costas): 5x Pílula de Comida (2d6+4 HP), 5x Pílula do Soldado (+1
+                                    ataques,
+                                    vantagem testes F/D/C por 1 cena), 5x Pílula de Chakra (30 CP), 5x Makibishi
+                                    (Desvantagem
+                                    inimigos), 2x Guizos (Vantagem furtividade/enganação/emboscadas)</p>
+                            </details>
+
+                            <hr>
+
+                            <h4 class="section-title">INTERPRETAÇÃO</h4>
+
+                            <details>
+                                <summary>
+                                    Aparência
+                                </summary>
+                                <p>Akashi é uma figura pequena e atrofiada, com cabelos brancos desgrenhados e pele
+                                    pálida.
+                                    Ele
+                                    veste trajes ninjas surrados e gigantescos para seu tamanho, improvisados com
+                                    cordas,
+                                    escondendo um corpo coberto de cicatrizes cirúrgicas. Seu rosto de aparência
+                                    infantil e
+                                    inofensiva contrasta profundamente com seu olhar morto e frio.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    Personalidade
+                                </summary>
+                                <p>Ele opera em um estado de dissociação funcional, tratando seu corpo não como um
+                                    lar,
+                                    mas
+                                    como
+                                    uma máquina biológica avariada que exige microgerenciamento constante. Movido
+                                    por
+                                    uma
+                                    paranoia tátil absoluta, ele compensa sua fragilidade física com um intelecto
+                                    cirúrgico
+                                    e
+                                    desprovido de empatia, evitando qualquer contato humano ou esforço
+                                    desnecessário.
+                                    Sob
+                                    sua
+                                    aparência infantil e inofensiva, esconde-se um observador frio que vê o mundo
+                                    como
+                                    um
+                                    laboratório hostil, onde a única vitória real é permanecer intocável.</p>
+                            </details>
+
+                            <details>
+                                <summary>
+                                    História
+                                </summary>
+                                <p>Nos registros públicos de Sunagakure, Akashi é apenas um órfão de saúde frágil,
+                                    nascido
+                                    nas
+                                    periferias do deserto. Contudo, nos arquivos negros da ANBU e do Conselho de
+                                    Suna,
+                                    sua
+                                    existência é catalogada sob a designação “Evidência 74”.</p>
+                                <p>Poucos meses após seu nascimento, ele foi selecionado por uma facção radical do
+                                    departamento
+                                    científico da vila. O objetivo era audacioso: utilizar material genético do
+                                    lendário
+                                    Terceiro Kazekage para recriar artificialmente a Liberação de Magnetismo
+                                    (Jiton),
+                                    considerada a arma suprema de Sunagakure.</p>
+                                <p>Enquanto a maioria das cobaias sucumbia à rejeição genética ou ao envenenamento
+                                    por
+                                    metais, o
+                                    corpo de Akashi reagiu de forma diferente. O processo tornou-se uma guerra
+                                    travada
+                                    dentro de
+                                    um corpo infantil. O DNA invasivo do Kazekage agiu como um patógeno, atacando
+                                    violentamente
+                                    seu sistema imunológico. Seus ossos interromperam o crescimento, os músculos
+                                    atrofiaram
+                                    sob
+                                    a rejeição agressiva, enquanto os órgãos internos se calcificavam lentamente,
+                                    adaptando-se
+                                    para processar toxinas e volumes extremos de chakra. A dor era tão absoluta e
+                                    constante
+                                    que
+                                    drenou a cor de seus cabelos, tornando-os brancos como a lua do deserto antes
+                                    mesmo
+                                    de
+                                    ele
+                                    completar cinco anos.</p>
+                                <p>Sua passagem pela Academia Ninja foi marcada pelo desprezo. Incapaz de acompanhar
+                                    o
+                                    condicionamento físico básico, Akashi era visto pelos instrutores comuns como um
+                                    fracasso —
+                                    um menino condenado a jamais se tornar um shinobi. Seus ossos doíam ao correr;
+                                    seus
+                                    músculos
+                                    falhavam ao tentar socar. Nas sombras, porém, os observadores do departamento
+                                    científico
+                                    constataram que sua afinidade magnética era instintiva.</p>
+                                <p>Aos dez anos, sob ordens diretas e confidenciais, ele foi levado de volta ao
+                                    laboratório
+                                    e
+                                    submetido a uma nova série de operações. Para sobreviver, o menino precisou
+                                    compreender
+                                    o
+                                    próprio corpo. Aprendeu a identificar cada composto químico injetado em suas
+                                    veias,
+                                    a
+                                    calcular quanto tempo seu coração poderia falhar antes do óbito e onde
+                                    pressionar
+                                    para
+                                    conter hemorragias internas
+                            </details>
+                        </div>
+
+            </section>
+
+            <!-- Feed à direita -->
+            <section id="feed" class="feed"></section>
+        </main>
+    </div>
+
+    <script src="/static/js/feed.js"></script>
+    <script src="/static/js/melkor.js"></script>
+
+    <script>
+        // evento para remover linha
+        document.getElementById("rollLines").addEventListener("click", (e) => {
+            if (e.target.classList.contains("remove-line")) {
+                const line = e.target.closest(".roll-line");
+                line.remove();
+            }
+        });
+
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Define o nome do jogador diretamente aqui
+            const playerName = "Akashi"; // <--- coloque o nome do jogador da ficha
+
+            document.querySelectorAll(".roll-btn").forEach(btn => {
+                btn.addEventListener("click", async () => {
+                    const mod = parseInt(btn.dataset.mod) || 0;
+
+                    // Nome da rolagem: remove o emoji 🎲 e espaços extras
+                    const rollKind = btn.parentElement.textContent.replace("🎲", "").trim();
+
+                    const payload = {
+                        player: playerName,
+                        rollKind: rollKind,
+                        rolls: [
+                            {
+                                diceCount: 1,
+                                diceType: 20,
+                                mod: mod
+                            }
+                        ]
+                    };
+
+                    try {
+                        const res = await fetch("/api/roll", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (!res.ok) throw new Error("Erro ao enviar rolagem");
+                        const data = await res.json();
+
+                        console.log("Rolagem enviada:", data);
+                    } catch (e) {
+                        console.error(e);
+                        alert("Erro ao enviar rolagem. Veja o console.");
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

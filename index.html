@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>RPG Hajime — Mestre</title>
+  <link rel="stylesheet" href="static/css/base.css">
+  <style>
+    /* Pequenos ajustes internos para o container de linhas */
+    .roll-lines-container {
+      margin-bottom: 10px;
+    }
+
+    .roll-line {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 5px;
+      align-items: center;
+    }
+
+    .roll-line input, .roll-line select {
+      width: 60px;
+    }
+
+    .roll-line .remove-line {
+      cursor: pointer;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 0 6px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .mini {
+      font-size: 12px;
+      padding: 2px 6px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>🎲 RPG Hajime</header>
+
+<div id="app">
+  <aside id="menu">
+    <a class="master" href="index.html">Melkor</a>
+    <a href="speroto.html">Aiko</a>
+    <a href="jean.html">Akashi</a>
+    <a href="shino.html">Shino</a>
+    <a href="vegeta.html">Shitaro</a>
+    <a href="satanas.html">Somu</a>
+    <a href="oka.html">Tanjiro</a>
+    <a href="shadow.html">Tetsuya</a>
+    <a href="waka.html">Yurei</a>
+  </aside>
+
+  <main id="main">
+    <section class="panel">
+      <!-- Informações do personagem -->
+      <div class="row">
+        <input id="charName" placeholder="Nome do personagem">
+        <input id="rollType" placeholder="Tipo de rolagem">
+      </div>
+
+      <!-- Container das linhas de rolagem -->
+      <div class="roll-lines-container" id="rollLines">
+        <!-- Primeira linha de rolagem padrão -->
+        <div class="roll-line">
+          <input type="number" class="diceCount" value="1" min="1">
+          <select class="diceType">
+            <option value="2">d2</option>
+            <option value="3">d3</option>
+            <option value="4">d4</option>
+            <option value="6">d6</option>
+            <option value="8">d8</option>
+            <option value="10">d10</option>
+            <option value="12">d12</option>
+            <option value="20" selected>d20</option>
+          </select>
+          <input type="number" class="mod" value="0">
+          <button class="remove-line">×</button>
+        </div>
+      </div>
+
+      <!-- Botões -->
+      <div class="row">
+        <button id="moreDice" class="mini">+linha</button>
+        <button id="rollBtn" class="primary">Rolar</button>
+      </div>
+    </section>
+
+    <!-- Feed de rolagens -->
+    <section id="feed" class="feed"></section>
+  </main>
+</div>
+
+<script src="/static/js/feed.js"></script>
+<script src="/static/js/melkor.js"></script>
+
+<script>
+  // evento para remover linha
+  document.getElementById("rollLines").addEventListener("click", (e) => {
+    if (e.target.classList.contains("remove-line")) {
+      const line = e.target.closest(".roll-line");
+      line.remove();
+    }
+  });
+</script>
+
+</body>
+</html>

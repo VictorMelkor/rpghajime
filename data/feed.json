@@ -1,0 +1,1192 @@
+[
+  {
+    "player": "fdaf",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      18
+    ],
+    "mod": 0,
+    "total": 18,
+    "time": 1768405894
+  },
+  {
+    "player": "fdaf",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      10
+    ],
+    "mod": 0,
+    "total": 10,
+    "time": 1768405897
+  },
+  {
+    "player": "dafsa",
+    "rollKind": "dfas",
+    "dice": "1d20",
+    "rolls": [
+      8
+    ],
+    "mod": 0,
+    "total": 8,
+    "time": 1768406006
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      8
+    ],
+    "mod": 0,
+    "total": 8,
+    "time": 1768406017
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      4
+    ],
+    "mod": 0,
+    "total": 4,
+    "time": 1768406019
+  },
+  {
+    "player": "melkro",
+    "rollKind": "teste",
+    "dice": "1d20",
+    "rolls": [
+      13
+    ],
+    "mod": 0,
+    "total": 13,
+    "time": 1768406092
+  },
+  {
+    "player": "ddd",
+    "rollKind": "ddd",
+    "dice": "1d20",
+    "rolls": [
+      8
+    ],
+    "mod": 0,
+    "total": 8,
+    "time": 1768410517
+  },
+  {
+    "player": "teste",
+    "rollKind": "1'",
+    "dice": "1d20",
+    "rolls": [
+      9
+    ],
+    "mod": 0,
+    "total": 9,
+    "time": 1768410655
+  },
+  {
+    "player": "ddd",
+    "rollKind": "a",
+    "dice": "1d20",
+    "rolls": [
+      10
+    ],
+    "mod": 0,
+    "total": 10,
+    "time": 1768410902
+  },
+  {
+    "player": "ddd",
+    "rollKind": "ss",
+    "dice": "1d3",
+    "rolls": [
+      2
+    ],
+    "mod": 0,
+    "total": 2,
+    "time": 1768410988
+  },
+  {
+    "player": "ddd",
+    "rollKind": "ss",
+    "dice": "1d3",
+    "rolls": [
+      2
+    ],
+    "mod": 5,
+    "total": 7,
+    "time": 1768411004
+  },
+  {
+    "player": "melkor",
+    "rollKind": "dano",
+    "dice": "1d6",
+    "rolls": [
+      4
+    ],
+    "mod": 4,
+    "total": 8,
+    "time": 1768411029
+  },
+  {
+    "player": "dafsa",
+    "rollKind": "das",
+    "dice": "1d20",
+    "rolls": [
+      13
+    ],
+    "mod": 0,
+    "total": 13,
+    "time": 1768411524
+  },
+  {
+    "player": "dafsa",
+    "rollKind": "das",
+    "dice": "1d20",
+    "rolls": [
+      2
+    ],
+    "mod": 5,
+    "total": 7,
+    "time": 1768411530
+  },
+  {
+    "player": "dafsa",
+    "rollKind": "das",
+    "dice": "1d20",
+    "rolls": [
+      14
+    ],
+    "mod": 5,
+    "total": 19,
+    "time": 1768411539
+  },
+  {
+    "player": "dafsa",
+    "rollKind": "das",
+    "dice": "1d3",
+    "rolls": [
+      3
+    ],
+    "mod": 0,
+    "total": 3,
+    "time": 1768411539
+  },
+  {
+    "player": "dsa",
+    "rollKind": "asda",
+    "dice": "1d20",
+    "rolls": [
+      13
+    ],
+    "mod": 0,
+    "total": 13,
+    "time": 1768411773
+  },
+  {
+    "player": "dsa",
+    "rollKind": "asda",
+    "dice": "1d3",
+    "rolls": [
+      1
+    ],
+    "mod": 0,
+    "total": 1,
+    "time": 1768411773
+  },
+  {
+    "player": "melkor",
+    "rollKind": "teste1",
+    "dice": "1d20",
+    "rolls": [
+      7
+    ],
+    "mod": 0,
+    "total": 7,
+    "time": 1768411812
+  },
+  {
+    "player": "melkor",
+    "rollKind": "teste1",
+    "dice": "1d20",
+    "rolls": [
+      4
+    ],
+    "mod": 2,
+    "total": 6,
+    "time": 1768411816
+  },
+  {
+    "player": "melkor",
+    "rollKind": "teste1",
+    "dice": "1d20",
+    "rolls": [
+      9
+    ],
+    "mod": 2,
+    "total": 11,
+    "time": 1768411823
+  },
+  {
+    "player": "melkor",
+    "rollKind": "teste1",
+    "dice": "1d20",
+    "rolls": [
+      7
+    ],
+    "mod": 0,
+    "total": 7,
+    "time": 1768411823
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      13
+    ],
+    "mod": 0,
+    "total": 13,
+    "time": 1768412155
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      8
+    ],
+    "mod": 0,
+    "total": 8,
+    "time": 1768412161
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      8
+    ],
+    "mod": 2,
+    "total": 10,
+    "time": 1768412164
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      9
+    ],
+    "mod": 2,
+    "total": 11,
+    "time": 1768412170
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      13
+    ],
+    "mod": 0,
+    "total": 13,
+    "time": 1768412170
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      15
+    ],
+    "mod": 2,
+    "total": 17,
+    "time": 1768412174
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d3",
+    "rolls": [
+      3
+    ],
+    "mod": 0,
+    "total": 3,
+    "time": 1768412174
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      5
+    ],
+    "mod": 0,
+    "total": 5,
+    "time": 1768412290
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      6
+    ],
+    "mod": 0,
+    "total": 6,
+    "time": 1768412297
+  },
+  {
+    "player": "dfas",
+    "rollKind": "dafds",
+    "dice": "1d20",
+    "rolls": [
+      5
+    ],
+    "mod": 0,
+    "total": 5,
+    "time": 1768412317
+  },
+  {
+    "player": "dfas",
+    "rollKind": "dafds",
+    "dice": "1d20",
+    "rolls": [
+      17
+    ],
+    "mod": 0,
+    "total": 17,
+    "time": 1768412319
+  },
+  {
+    "player": "dfas",
+    "rollKind": "dafds",
+    "dice": "1d20",
+    "rolls": [
+      8
+    ],
+    "mod": 0,
+    "total": 8,
+    "time": 1768412319
+  },
+  {
+    "player": "dfas",
+    "rollKind": "dafds",
+    "dice": "1d20",
+    "rolls": [
+      10
+    ],
+    "mod": 0,
+    "total": 10,
+    "time": 1768412321
+  },
+  {
+    "player": "dfas",
+    "rollKind": "dafds",
+    "dice": "1d4",
+    "rolls": [
+      4
+    ],
+    "mod": 0,
+    "total": 4,
+    "time": 1768412321
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      7
+    ],
+    "mod": 0,
+    "total": 7,
+    "time": 1768412337
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      12
+    ],
+    "mod": 0,
+    "total": 12,
+    "time": 1768412338
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      1
+    ],
+    "mod": 0,
+    "total": 1,
+    "time": 1768412345
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      14
+    ],
+    "mod": 0,
+    "total": 14,
+    "time": 1768412461
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      7
+    ],
+    "mod": 0,
+    "total": 7,
+    "time": 1768412463
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "dice": "1d20",
+    "rolls": [
+      1
+    ],
+    "mod": 0,
+    "total": 1,
+    "time": 1768412472
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          3
+        ],
+        "mod": 0,
+        "line_total": 3
+      }
+    ],
+    "total": 3,
+    "time": 1768412613
+  },
+  {
+    "player": "fdsa",
+    "rollKind": "dfada",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          14
+        ],
+        "mod": 0,
+        "line_total": 14
+      }
+    ],
+    "total": 14,
+    "time": 1768412617
+  },
+  {
+    "player": "fdsa",
+    "rollKind": "dfada",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          3
+        ],
+        "mod": 0,
+        "line_total": 3
+      },
+      {
+        "dice": "1d20",
+        "rolls": [
+          13
+        ],
+        "mod": 0,
+        "line_total": 13
+      }
+    ],
+    "total": 16,
+    "time": 1768412621
+  },
+  {
+    "player": "fdsa",
+    "rollKind": "dfada",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          5
+        ],
+        "mod": 1,
+        "line_total": 6
+      },
+      {
+        "dice": "1d20",
+        "rolls": [
+          3
+        ],
+        "mod": 2,
+        "line_total": 5
+      }
+    ],
+    "total": 11,
+    "time": 1768412634
+  },
+  {
+    "player": "MELKOR",
+    "rollKind": "destreza",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          11
+        ],
+        "mod": 0,
+        "line_total": 11
+      }
+    ],
+    "total": 11,
+    "time": 1768412939
+  },
+  {
+    "player": "MELKOR",
+    "rollKind": "destreza",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          4
+        ],
+        "mod": 4,
+        "line_total": 8
+      }
+    ],
+    "total": 8,
+    "time": 1768412948
+  },
+  {
+    "player": "MELKOR",
+    "rollKind": "destreza",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          13
+        ],
+        "mod": 4,
+        "line_total": 17
+      },
+      {
+        "dice": "1d20",
+        "rolls": [
+          2
+        ],
+        "mod": 0,
+        "line_total": 2
+      },
+      {
+        "dice": "1d20",
+        "rolls": [
+          10
+        ],
+        "mod": 0,
+        "line_total": 10
+      },
+      {
+        "dice": "1d20",
+        "rolls": [
+          5
+        ],
+        "mod": 0,
+        "line_total": 5
+      },
+      {
+        "dice": "1d20",
+        "rolls": [
+          20
+        ],
+        "mod": 0,
+        "line_total": 20
+      }
+    ],
+    "total": 54,
+    "time": 1768413117
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          14
+        ],
+        "mod": 0,
+        "line_total": 14
+      }
+    ],
+    "total": 14,
+    "time": 1768413754
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          11
+        ],
+        "mod": 0,
+        "line_total": 11
+      }
+    ],
+    "total": 11,
+    "time": 1768413813
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          2
+        ],
+        "mod": 0,
+        "line_total": 2
+      }
+    ],
+    "total": 2,
+    "time": 1768413813
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          13
+        ],
+        "mod": 0,
+        "line_total": 13
+      }
+    ],
+    "total": 13,
+    "time": 1768413814
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          14
+        ],
+        "mod": 0,
+        "line_total": 14
+      }
+    ],
+    "total": 14,
+    "time": 1768413814
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          4
+        ],
+        "mod": 0,
+        "line_total": 4
+      }
+    ],
+    "total": 4,
+    "time": 1768413814
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          15
+        ],
+        "mod": 0,
+        "line_total": 15
+      }
+    ],
+    "total": 15,
+    "time": 1768413814
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          15
+        ],
+        "mod": 0,
+        "line_total": 15
+      }
+    ],
+    "total": 15,
+    "time": 1768413815
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          3
+        ],
+        "mod": 0,
+        "line_total": 3
+      }
+    ],
+    "total": 3,
+    "time": 1768413815
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          3
+        ],
+        "mod": 0,
+        "line_total": 3
+      }
+    ],
+    "total": 3,
+    "time": 1768413815
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          5
+        ],
+        "mod": 0,
+        "line_total": 5
+      }
+    ],
+    "total": 5,
+    "time": 1768413815
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          4
+        ],
+        "mod": 0,
+        "line_total": 4
+      }
+    ],
+    "total": 4,
+    "time": 1768413815
+  },
+  {
+    "player": "Jean",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          6
+        ],
+        "mod": 0,
+        "line_total": 6
+      }
+    ],
+    "total": 6,
+    "time": 1768413815
+  },
+  {
+    "player": "AKASHI",
+    "rollKind": "Força (STR)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          3
+        ],
+        "mod": -1,
+        "line_total": 2
+      }
+    ],
+    "total": 2,
+    "time": 1768420695
+  },
+  {
+    "player": "AKASHI",
+    "rollKind": "Destreza (DEX)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          3
+        ],
+        "mod": -1,
+        "line_total": 2
+      }
+    ],
+    "total": 2,
+    "time": 1768420709
+  },
+  {
+    "player": "AKASHI",
+    "rollKind": "Destreza (DEX)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          17
+        ],
+        "mod": -1,
+        "line_total": 16
+      }
+    ],
+    "total": 16,
+    "time": 1768420712
+  },
+  {
+    "player": "DFASD",
+    "rollKind": "DFAF",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          11
+        ],
+        "mod": 1,
+        "line_total": 12
+      }
+    ],
+    "total": 12,
+    "time": 1768420770
+  },
+  {
+    "player": "—",
+    "rollKind": "Rolagem",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          12
+        ],
+        "mod": 1,
+        "line_total": 13
+      },
+      {
+        "dice": "1d20",
+        "rolls": [
+          3
+        ],
+        "mod": -1,
+        "line_total": 2
+      }
+    ],
+    "total": 15,
+    "time": 1768420832
+  },
+  {
+    "player": "AKASHI",
+    "rollKind": "Força (STR)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          10
+        ],
+        "mod": -1,
+        "line_total": 9
+      }
+    ],
+    "total": 9,
+    "time": 1768421004
+  },
+  {
+    "player": "—",
+    "rollKind": "Força (STR): 8 (–1)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          14
+        ],
+        "mod": -1,
+        "line_total": 13
+      }
+    ],
+    "total": 13,
+    "time": 1768421780
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "dadsfa",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          9
+        ],
+        "mod": 0,
+        "line_total": 9
+      }
+    ],
+    "total": 9,
+    "time": 1768421831
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "dadsfa",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          2
+        ],
+        "mod": 3,
+        "line_total": 5
+      }
+    ],
+    "total": 5,
+    "time": 1768421840
+  },
+  {
+    "player": "Shino",
+    "rollKind": "Destreza (DEX): 8 (–1)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          9
+        ],
+        "mod": -1,
+        "line_total": 8
+      }
+    ],
+    "total": 8,
+    "time": 1768422260
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Constituição (CON): 18 (+4)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          17
+        ],
+        "mod": 4,
+        "line_total": 21
+      }
+    ],
+    "total": 21,
+    "time": 1768422274
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "esar",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          11
+        ],
+        "mod": 0,
+        "line_total": 11
+      }
+    ],
+    "total": 11,
+    "time": 1768422359
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Persuasão (CHA): –1",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          1
+        ],
+        "mod": -1,
+        "line_total": 0
+      }
+    ],
+    "total": 0,
+    "time": 1768422375
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque corpo a corpo: 1d20 + mod FOR",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          5
+        ],
+        "mod": -1,
+        "line_total": 4
+      }
+    ],
+    "total": 4,
+    "time": 1768422783
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque corpo a corpo:",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          17
+        ],
+        "mod": -1,
+        "line_total": 16
+      }
+    ],
+    "total": 16,
+    "time": 1768422804
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque corpo a corpo: 1d20 + FOR",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          7
+        ],
+        "mod": -1,
+        "line_total": 6
+      }
+    ],
+    "total": 6,
+    "time": 1768422977
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque à distância: 1d20 + DEX",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          10
+        ],
+        "mod": -1,
+        "line_total": 9
+      }
+    ],
+    "total": 9,
+    "time": 1768422986
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque Ninjutsu: 1d20 + INT",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          15
+        ],
+        "mod": 4,
+        "line_total": 19
+      }
+    ],
+    "total": 19,
+    "time": 1768422995
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque corpo a corpo (FOR)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          14
+        ],
+        "mod": -1,
+        "line_total": 13
+      }
+    ],
+    "total": 13,
+    "time": 1768423059
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque à distância (DEX)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          5
+        ],
+        "mod": -1,
+        "line_total": 4
+      }
+    ],
+    "total": 4,
+    "time": 1768423067
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque Ninjutsu (INT)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          1
+        ],
+        "mod": 4,
+        "line_total": 5
+      }
+    ],
+    "total": 5,
+    "time": 1768423072
+  },
+  {
+    "player": "Akashi",
+    "rollKind": "Ataque Genjutsu (CAR)",
+    "lines": [
+      {
+        "dice": "1d20",
+        "rolls": [
+          4
+        ],
+        "mod": -1,
+        "line_total": 3
+      }
+    ],
+    "total": 3,
+    "time": 1768423076
+  }
+]
