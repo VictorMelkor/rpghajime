@@ -40,9 +40,12 @@ def get_feed():
 
 @app.route("/api/roll", methods=["POST"])
 def roll():
-    token = request.headers.get("X-ROLL-TOKEN")
-    if token != ROLL_TOKEN:
+    token = (request.headers.get("X-ROLL-TOKEN") or "").strip()
+    expected = (ROLL_TOKEN or "").strip()
+
+    if token != expected:
         return jsonify({"error": "unauthorized"}), 403
+
 
     payload = request.get_json(force=True)
 
