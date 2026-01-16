@@ -22,40 +22,60 @@ moreDice.addEventListener("click", () => {
         <input type="number" class="mod" value="0">
         <button class="remove-line">×</button>
     `;
+
     rollLinesContainer.appendChild(newLine);
 });
 
-// remover linha
+// remover linha (garante que reste ao menos uma)
 rollLinesContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("remove-line")) {
-        e.target.closest(".roll-line").remove();
+        const all = rollLinesContainer.querySelectorAll(".roll-line");
+        if (all.length > 1) {
+            e.target.closest(".roll-line").remove();
+        }
     }
 });
 
 function collectForm() {
     const lines = [];
+
     document.querySelectorAll(".roll-line").forEach(line => {
-        const diceCount = parseInt(line.querySelector(".diceCount").value,10) || 1;
-        const diceType = parseInt(line.querySelector(".diceType").value,10) || 20;
-        const mod = parseInt(line.querySelector(".mod").value,10) || 0;
-        lines.push({diceCount, diceType, mod});
+        const diceCount = parseInt(line.querySelector(".diceCount").value, 10) || 1;
+        const diceType  = parseInt(line.querySelector(".diceType").value, 10) || 20;
+        const mod       = parseInt(line.querySelector(".mod").value, 10) || 0;
+
+        lines.push({ diceCount, diceType, mod });
     });
+
     return {
-        player: document.getElementById("charName").value || "—",
-        rollKind: document.getElementById("rollType").value || "Rolagem",
+        player: document.getElementById("charName").value.trim() || "—",
+        rollKind: document.getElementById("rollType").value.trim() || "Rolagem",
         rolls: lines
     };
 }
 
 async function sendRoll(payload) {
-    await fetch("/api/roll", {
+    const res = await fetch("/api/roll", {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
     });
+
+    if (!res.ok) {
+        throw new Error("Falha ao enviar rolagem");
+    }
 }
 
 rollBtn.addEventListener("click", async () => {
-    const data = collectForm();
-    await sendRoll(data);
+    rollBtn.disabled = true;
+
+    try {
+        const data = collectForm();
+        await sendRoll(data);
+    } catch (e) {
+        console.error(e);
+        alert("Erro ao enviar rolagem");
+    } finally {
+        rollBtn.disabled = false;
+    }
 });
