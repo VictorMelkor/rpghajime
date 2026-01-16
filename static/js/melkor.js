@@ -57,7 +57,9 @@ function collectForm() {
 async function sendRoll(payload) {
     const res = await fetch("/api/roll", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json",
+            "X-ROLL-TOKEN": "hajime-2026-mesa-a"
+         },
         body: JSON.stringify(payload)
     });
 
